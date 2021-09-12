@@ -26,7 +26,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-
 export const ParentProperty = styled.div`
   width: 650px;
   position: relative;
@@ -95,6 +94,3 @@ export const TableRow = styled.span`
   text-transform: uppercase;
   font-weight: 700;
 `;
-
-
-

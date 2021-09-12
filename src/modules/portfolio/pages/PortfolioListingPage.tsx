@@ -7,11 +7,20 @@ import RignArrow from 'components/icons/rightdown';
 import { useSelector, useDispatch } from 'react-redux';
 import { openModal } from 'Redux/action';
 import { ICalc } from 'Redux/reducer';
-import { GlobalStyle, ParentProperty, Paragrahp, AccordionWrapper, MyCoinList, Badge, GreyBadge, TableRow, Property, YellowButton } from 'Styles'
-
+import {
+  GlobalStyle,
+  ParentProperty,
+  Paragrahp,
+  AccordionWrapper,
+  MyCoinList,
+  Badge,
+  GreyBadge,
+  TableRow,
+  Property,
+  YellowButton,
+} from 'Styles';
 
 interface IProperty {
-
   myProperty: ICalc;
   openModal: boolean;
 }
@@ -48,10 +57,7 @@ const PortfolioListingPage = () => {
     let coin: string | null = localStorage.getItem('coins');
     if (coin) {
       const coinPo: ICoin = JSON.parse(coin);
-      console.log(coinPo);
       setCoins({ name: coinPo.name, id: coinPo.id, symbol: coinPo.symbol });
-      console.log({ coin: coins });
-      console.log(coins.id);
       getQuoter(coinPo.id);
     }
   }, []);
@@ -59,7 +65,6 @@ const PortfolioListingPage = () => {
   const getQuoter = async (id: string) => {
     const quoter = await axios.get(`/api/quotes?ids=${id}`);
     const usdData = quoter.data;
-    console.log(usdData);
     const coinInfosPrice = usdData.data[id].quote.USD.price.toFixed(2);
     const coinInfosIncreament =
       usdData.data[id].quote.USD.percent_change_24h.toFixed(2);
@@ -70,8 +75,6 @@ const PortfolioListingPage = () => {
     };
     setCoinInfo(coinInfos);
   };
-
-  console.log({ name: selector.myProperty });
 
   return (
     <div>
@@ -139,17 +142,15 @@ const PortfolioListingPage = () => {
           </AccordionWrapper>
         </div>
       ) : (
-          <Paragrahp>
-            <p>
-              Welcome to crypto portfolio manager <br />
+        <Paragrahp>
+          <p>
+            Welcome to crypto portfolio manager <br />
             Use search on the right to add coins to your profile
           </p>
-          </Paragrahp>
-        )}
+        </Paragrahp>
+      )}
     </div>
   );
 };
-
-
 
 export default PortfolioListingPage;

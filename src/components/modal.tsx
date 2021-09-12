@@ -46,8 +46,6 @@ const Modal = ({ coinId }: ICoinId) => {
     dispatch(closeModal());
   };
 
-  console.log({ value: quoteInfo });
-
   return (
     <ModalWrapper>
       <ModalContent>
@@ -119,7 +117,7 @@ const ModalContent = styled.div`
   height: 300px;
   border: 1px solid #ccc;
   background: #fff;
-  borderradius: 4px;
+  border-radius: 4px;
   padding: 20px;
 `;
 
@@ -129,7 +127,7 @@ const ModalWrapper = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  backgroundcolor: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;

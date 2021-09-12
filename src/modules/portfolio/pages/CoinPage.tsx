@@ -1,4 +1,4 @@
-import {GlobalStyle} from 'Styles';
+import { GlobalStyle } from 'Styles';
 import TopNavbar from '../../../components/navbar';
 import { NextPage } from 'next';
 import axios from 'axios';
@@ -18,7 +18,6 @@ const CoinPage: NextPage = () => {
     dataFetch();
   }, []);
   const [coins, setCoins] = useState<ICoin[]>([]);
-  console.log(coins);
   const selectCoin = (coin: ICoin) => {
     let coinData = JSON.parse(JSON.stringify(coin));
     localStorage.setItem('coins', JSON.stringify(coinData));
