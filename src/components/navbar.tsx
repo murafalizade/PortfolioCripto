@@ -45,7 +45,7 @@ const Navbar = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  box-shadow: 0px 0px 5px -2px #888;
+  box-shadow: 0% 0% 5px -2px #888;
 `;
 
 export default TopNavbar;
