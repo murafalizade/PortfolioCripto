@@ -28,9 +28,6 @@
     "styled-components": "^5.2.3",
     "styled-reset": "^4.3.4"
   },
-  "engines": {
-    "node": "13.13.0"
-  },
   "devDependencies": {
     "@types/node": "15.0.0",
     "@types/pino": "^6.3.8",
