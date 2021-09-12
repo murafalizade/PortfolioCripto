@@ -99,6 +99,7 @@ const Input = styled.input`
   font-size: 15px;
   padding: 5px;
   margin: 5px;
+  
   :focus {
     outline: none;
   }

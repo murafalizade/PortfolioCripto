@@ -75,7 +75,6 @@ export const GreyBadge = styled.div`
 export const YellowButton = styled.button`
   width: 200px;
   font-weight: 700;
-
   height: 50px;
   border: none;
   background-color: yellow;
