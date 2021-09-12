@@ -25,7 +25,7 @@ type CmcStatus = {
   total_count: number;
 };
 
-type CryptoCurrencyListing = {
+export type CryptoCurrencyListing = {
   id: number;
   name: string;
   symbol: string;
